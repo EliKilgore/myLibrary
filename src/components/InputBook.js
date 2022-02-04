@@ -33,25 +33,25 @@ const InputBook = (props) => {
             <input 
                 type="text"
                 name="title"
-                placeholder="book title..."
+                placeholder="book title"
                 value={inputBook.title}
                 onChange={onChange}
                 />
             <input 
                 type="text"
                 name="author"
-                placeholder="author..."
+                placeholder="author"
                 value={inputBook.author}
                 onChange={onChange}
                 />
             <input 
                 type="number"
                 name="pageCount" 
-                placeholder="page count..."
+                placeholder="page count"
                 value={inputBook.pageCount}
                 onChange={onChange}
                 />
-            <button type="submit">
+            <button id="submit" type="submit">
                 Add Book!
             </button>
         </form>

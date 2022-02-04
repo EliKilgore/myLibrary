@@ -1,7 +1,6 @@
 import React from "react";
-import { FaTrash } from "react-icons/fa" 
 import StarRating from "./StarRating";
-
+import {FiTrash} from 'react-icons/fi'
 const BookItem = (props) => {
 
     const {title, author, id, finished, pageCount } = props.book
@@ -20,7 +19,7 @@ const BookItem = (props) => {
                 <span>{title}, {author}</span>
             </div>
             <div>
-                <button className="delete" onClick={() => props.handleDelete(id)}><FaTrash /></button>
+                <button className="delete" onClick={() => props.handleDelete(id)}><FiTrash size={18}/></button>
                 <div className="pageCount">{pageCount} pages</div>
             </div>
             

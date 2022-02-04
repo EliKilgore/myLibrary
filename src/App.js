@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import uniqid from 'uniqid'
+import Header from './components/Header'
 import InputBook from './components/InputBook';
 import BooksList from './components/BooksList';
 import WordCount from './components/WordCount'
@@ -52,7 +53,7 @@ function App() {
   }
   return (
     <div>
-      <h1>myLibrary</h1>
+      <Header />
       <InputBook addBook={addBook}/>
       <BooksList library={library} handleChange={handleChange} handleDelete={handleDelete} handleRating={handleRating}/>
       <WordCount library={library}/>
