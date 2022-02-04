@@ -16,7 +16,8 @@ function App() {
       author: author,
       pageCount: pageCount,
       finished: false,
-      rating: 0
+      rating: 0,
+      comments: ''
     };
     setLibrary([...library, newBook])
     console.log(newBook)
@@ -51,11 +52,23 @@ function App() {
       return item
     }))
   }
+
+  const handleComment = (id, newComment) => {
+    setLibrary(prevState => prevState.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item, comment: newComment
+        }
+      }
+      return item
+    }))
+  }
+
   return (
     <div>
       <Header />
       <InputBook addBook={addBook}/>
-      <BooksList library={library} handleChange={handleChange} handleDelete={handleDelete} handleRating={handleRating}/>
+      <BooksList library={library} handleChange={handleChange} handleDelete={handleDelete} handleRating={handleRating} handleComment={handleComment}/>
       <WordCount library={library}/>
     </div>
   );

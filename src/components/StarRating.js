@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FiStar } from 'react-icons/fi'
 
 const StarRating = (props) => {
     const [rating, setRating] = useState(0)
@@ -19,7 +20,7 @@ const StarRating = (props) => {
                         className={index  <=  rating ? "on" : "off"}
                         onClick={()=>onRatingChange(index)}
                     >
-                    <span className="star">&#9733;</span>
+                    <span className="star"><FiStar size={18}/></span>
                     </button>
                 )
             })}

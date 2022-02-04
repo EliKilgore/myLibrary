@@ -13,6 +13,7 @@ const BooksList = props => {
                     handleChange={props.handleChange} 
                     handleDelete={props.handleDelete}
                     handleRating={props.handleRating}
+                    handleComment={props.handleComment}
                 />
             )}
         </ul>
